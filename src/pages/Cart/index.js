@@ -462,6 +462,7 @@ export default function Cart({ navigation, route }) {
 
           {!tipe && <View style={{
             padding: 10,
+            flex: 1,
             backgroundColor: colors.danger,
           }}><Text style={{
             fontSize: windowWidth / 30,
