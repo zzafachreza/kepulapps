@@ -317,7 +317,7 @@ export default function Cart({ navigation, route }) {
             setJenis(x);
 
 
-            if (qtyTotal < 5 && x == "AMBIL DITEMPAT") {
+            if (qtyTotal < 1 && x == "AMBIL DITEMPAT") {
               setTipe(false);
               setbuka(false);
               console.warn('test')
@@ -469,7 +469,7 @@ export default function Cart({ navigation, route }) {
             textAlign: 'center',
             fontFamily: fonts.secondary[600],
             color: colors.white,
-          }}>Maaf sampah yang Anda jual kurang dari 5 kg</Text></View>}
+          }}>Maaf sampah yang Anda jual kurang dari 1 kg</Text></View>}
         </View>}
 
 

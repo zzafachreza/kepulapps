@@ -7,6 +7,7 @@ import {
   ImageBackground,
   TouchableNativeFeedback,
   Image,
+  Linking,
 } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { colors } from '../../utils/colors';
@@ -33,15 +34,19 @@ export default function MyCarouser() {
   const [data, setData] = useState([]);
 
   const renderCarouselItem = ({ item }) => (
-    <Image
-      source={{ uri: item.image }}
-      style={{
-        resizeMode: 'cover',
-        height: 180,
-        width: 300,
-        borderRadius: 10,
-      }}
-    />
+    <TouchableOpacity onPress={() => {
+      Linking.openURL(item.name)
+    }}>
+      <Image
+        source={{ uri: item.image }}
+        style={{
+          resizeMode: 'cover',
+          height: 180,
+          width: 300,
+          borderRadius: 10,
+        }}
+      />
+    </TouchableOpacity>
   );
 
   return (

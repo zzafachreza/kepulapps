@@ -48,6 +48,9 @@ export default function Register({ navigation }) {
     email: '',
     password: '',
     telepon: '',
+    sekolah: '',
+    kelas: '',
+    ttl: ''
   });
 
   const simpan = () => {
@@ -55,7 +58,10 @@ export default function Register({ navigation }) {
       data.nama_lengkap.length === 0 &&
       data.email.length === 0 &&
       data.password.length === 0 &&
-      data.telepon.length === 0
+      data.telepon.length === 0 &&
+      data.sekolah.length === 0 &&
+      data.kelas.length === 0 &&
+      data.ttl.length === 0
     ) {
       showMessage({
         message: 'Maaf Semua Field Harus Di isi !',
@@ -67,6 +73,18 @@ export default function Register({ navigation }) {
     } else if (data.telepon.length === 0) {
       showMessage({
         message: 'Maaf Telepon masih kosong !',
+      });
+    } else if (data.sekolah.length === 0) {
+      showMessage({
+        message: 'Maaf sekolah masih kosong !',
+      });
+    } else if (data.kelas.length === 0) {
+      showMessage({
+        message: 'Maaf kelas masih kosong !',
+      });
+    } else if (data.ttl.length === 0) {
+      showMessage({
+        message: 'Maaf tempat dan tanggal lahir masih kosong !',
       });
     } else if (data.password.length === 0) {
       showMessage({
@@ -128,6 +146,46 @@ export default function Register({ navigation }) {
             setData({
               ...data,
               nama_lengkap: value,
+            })
+          }
+        />
+
+        <MyGap jarak={10} />
+        <MyInput
+          label="Sekolah"
+          iconname="school"
+          value={data.sekolah}
+          onChangeText={value =>
+            setData({
+              ...data,
+              sekolah: value,
+            })
+          }
+        />
+
+
+        <MyGap jarak={10} />
+        <MyInput
+          label="Kelas"
+          iconname="school"
+          value={data.kelas}
+          onChangeText={value =>
+            setData({
+              ...data,
+              kelas: value,
+            })
+          }
+        />
+
+        <MyGap jarak={10} />
+        <MyInput
+          label="Tempat tanggal lahir (contoh : Tuban, 15 Mei 1990)"
+          iconname="calendar"
+          value={data.ttl}
+          onChangeText={value =>
+            setData({
+              ...data,
+              ttl: value,
             })
           }
         />

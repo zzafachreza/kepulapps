@@ -19,5 +19,5 @@ export const getData = async key => {
   }
 };
 
-
+export const urlApp = 'https://kepul.zavalabs.com/';
 export const urlAPI = 'https://kepul.zavalabs.com/api';
