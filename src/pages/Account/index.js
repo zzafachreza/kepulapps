@@ -90,8 +90,7 @@ export default function Account({ navigation, route }) {
       <View style={{ padding: 10, flex: 1 }}>
 
         <MyList label="Nama Lengkap" value={user.nama_lengkap} />
-        <MyList label="Sekolah" value={user.sekolah} />
-        <MyList label="Kelas" value={user.kelas} />
+
         <MyList label="Tempat tanggal lahir" value={user.ttl} />
         <MyList label="Email" value={user.email} />
         <MyList label="Telepon / Whatsapp" value={user.telepon} />

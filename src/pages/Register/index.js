@@ -48,8 +48,6 @@ export default function Register({ navigation }) {
     email: '',
     password: '',
     telepon: '',
-    sekolah: '',
-    kelas: '',
     ttl: ''
   });
 
@@ -59,8 +57,6 @@ export default function Register({ navigation }) {
       data.email.length === 0 &&
       data.password.length === 0 &&
       data.telepon.length === 0 &&
-      data.sekolah.length === 0 &&
-      data.kelas.length === 0 &&
       data.ttl.length === 0
     ) {
       showMessage({
@@ -73,14 +69,6 @@ export default function Register({ navigation }) {
     } else if (data.telepon.length === 0) {
       showMessage({
         message: 'Maaf Telepon masih kosong !',
-      });
-    } else if (data.sekolah.length === 0) {
-      showMessage({
-        message: 'Maaf sekolah masih kosong !',
-      });
-    } else if (data.kelas.length === 0) {
-      showMessage({
-        message: 'Maaf kelas masih kosong !',
       });
     } else if (data.ttl.length === 0) {
       showMessage({
@@ -150,32 +138,7 @@ export default function Register({ navigation }) {
           }
         />
 
-        <MyGap jarak={10} />
-        <MyInput
-          label="Sekolah"
-          iconname="school"
-          value={data.sekolah}
-          onChangeText={value =>
-            setData({
-              ...data,
-              sekolah: value,
-            })
-          }
-        />
 
-
-        <MyGap jarak={10} />
-        <MyInput
-          label="Kelas"
-          iconname="school"
-          value={data.kelas}
-          onChangeText={value =>
-            setData({
-              ...data,
-              kelas: value,
-            })
-          }
-        />
 
         <MyGap jarak={10} />
         <MyInput
