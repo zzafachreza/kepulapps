@@ -241,31 +241,7 @@ export default function EditProfile({ navigation, route }) {
         />
 
 
-        <MyGap jarak={10} />
-        <MyInput
-          label="Sekolah"
-          iconname="school-outline"
-          value={data.sekolah}
-          onChangeText={value =>
-            setData({
-              ...data,
-              sekolah: value,
-            })
-          }
-        />
 
-        <MyGap jarak={10} />
-        <MyInput
-          label="Kelas"
-          iconname="school-outline"
-          value={data.kelas}
-          onChangeText={value =>
-            setData({
-              ...data,
-              kelas: value,
-            })
-          }
-        />
 
         <MyGap jarak={10} />
         <MyInput

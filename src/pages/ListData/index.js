@@ -113,7 +113,7 @@ export default function ({ navigation, route }) {
               fontFamily: fonts.secondary[600],
               color: colors.black,
             }}>
-            {item.sekolah}
+            {item.nama_lengkap}
           </Text>
           <Text
             style={{
@@ -121,7 +121,7 @@ export default function ({ navigation, route }) {
               textAlign: 'center',
               color: colors.black,
             }}>
-            {item.kelas}
+            {item.telepon}
           </Text>
         </View>
 
